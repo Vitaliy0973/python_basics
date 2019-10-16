@@ -11,22 +11,17 @@ user_time = int(input('Введите время в секундах: '))
 if user_time < 3600:
 	hour = '00'
 
-	minuts = str(user_time // 60)
-	minuts = two_number(minuts)
+	minuts = two_number(str(user_time // 60))
 
-	secondes = str(user_time % 60)
-	secondes = two_number(secondes)
+	secondes = two_number(str(user_time % 60))
 
 	print(f'Время: {hour}:{minuts}:{secondes}')
 
 elif user_time >= 3600:
-	hour = str(user_time // 3600)
-	hour = two_number(hour)
+	hour = two_number(str(user_time // 3600))
 
-	minuts = str(user_time % 3600 // 60)
-	minuts = two_number(minuts)
+	minuts = two_number(str(user_time % 3600 // 60))
 
-	secondes = str(user_time % 3600 % 60)
-	secondes = two_number(secondes)
+	secondes = two_number(str(user_time % 3600 % 60))
 
 	print(f'Время: {hour}:{minuts}:{secondes}')
